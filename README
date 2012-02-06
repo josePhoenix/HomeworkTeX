@@ -1,0 +1,45 @@
+HomeworkTeX
+===================
+
+The HomeworkTeX package is a very simple set of LaTeX environments to help you
+format your homework. A quick overview of the environments in the package is
+included below. A working example is available in example.tex.
+
+INSTALLATION
+
+For Mac users running the standard LaTeX distribution, make sure the
+~/Library/texmf/tex/latex/ directory exists, and copy or symlink the
+HomeworkTeX folder into it.
+
+(For others, find the TEXMF directory for your distribution, and copy or symlink the HomeworkTeX folder into it.)
+
+OVERVIEW
+
+Here are all the environments HomeworkTeX provides (intended to be used
+between a \begin{document} and \end{document})
+
+-------------------
+
+\begin{solutionset} -- Sets up the problem counter
+
+\begin{problem} -- Shows the problem in a nice box with a number
+\end{problem}
+
+\begin{solution} -- Shows a solution with a little black square dingbat at the
+                    end to indicate you're finished
+\end{solution}
+
+\begin{stepsolution} -- Similar to the above, except it lets you separate your
+                        solution into steps with the \step command
+  \step Lorem ipsum
+  \step Dolor sit amet
+\end{stepsolution}
+
+\end{solutionset}
+
+-------------------
+
+CREDITS
+
+Developed by Joseph Long at Pomona College while procrastinating on his 
+Differential Equations homework.

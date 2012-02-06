@@ -1,0 +1,76 @@
+\ProvidesClass{pomonamathhw}
+% Packages
+\usepackage{graphicx}
+\usepackage{framed}
+\usepackage{epstopdf}
+\usepackage{amssymb,amsmath,color,graphicx}
+\usepackage{gensymb}
+\usepackage{geometry}
+\usepackage{mathtools}
+\usepackage[parfill]{parskip}
+
+\geometry{letterpaper}
+\topmargin = -1in
+\textheight = 9in
+\pagestyle{empty}
+\parindent=0pt
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\newcommand{\name}[1]{
+	\begin{flushright}
+	#1
+	\end{flushright}
+}
+
+\newcommand{\due}[1]{
+	\begin{flushright}
+	{\bf Due:} {#1}
+	\end{flushright}
+	\vspace{8pt}
+}
+
+\newcommand{\assignment}[2]{
+	\begin{center}
+	{\Large Assignment {#1}}\\
+	\vspace{8pt}
+	{#2}
+	\end{center}
+	\rule{\linewidth}{0.7pt}
+}
+
+\newenvironment{solutionset}[0]{
+	\renewcommand{\labelenumi}{\arabic{enumi}.}
+	\begin{enumerate}
+}{
+	\end{enumerate}
+}
+
+\newenvironment{problem}[0]{
+	\begin{framed}
+	\item
+}{
+	\end{framed}
+	\vspace{8pt}
+
+}
+
+\newenvironment{solution}[0]{
+}{
+	\begin{flushright}
+	\ensuremath{\scriptscriptstyle\blacksquare}
+	\end{flushright}
+	\vspace{8pt}
+}
+
+\newcommand{\step}[0]{
+	\item
+}
+
+\newenvironment{stepsolution}[0]{
+	\begin{solution}
+	\begin{enumerate}
+	\renewcommand{\labelenumii}{\roman{enumii}.}
+}{
+	\end{enumerate}
+	\end{solution}
+}
